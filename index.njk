@@ -30,42 +30,42 @@
     <div class="about">
       <div>
         <div class="image">
-          <img src="{{ airtable.about.Photo[0].url }}"></img>
+          <img src="{{ airtable['À propos'].Photo[0].url }}"></img>
         </div>
-        <p class="content">{{ airtable.about.Texte }}</p>
+        <p class="content">{{ airtable['À propos'].Texte }}</p>
       </div>
     </div>
     </div>
     <div class="next-concerts">
       <div>
         <div class="content">
-          <h2>{{ airtable['upcoming concerts'].Titre }}</h2>
-          {{ airtable['upcoming concerts'].Texte | markdown | safe }}
+          <h2>{{ airtable['Prochaines dates'].Titre }}</h2>
+          {{ airtable['Prochaines dates'].Texte | markdown | safe }}
         </div>
         <div class="image">
-          <img src="{{ airtable['upcoming concerts'].Photo[0].url }}"></img>
+          <img src="{{ airtable['Prochaines dates'].Photo[0].url }}"></img>
         </div>
       </div>
     </div>
     <div class="band-members">
       <div>
         <div class="image">
-          <img src="{{ airtable['band members'].Photo[0].url }}"></img>
+          <img src="{{ airtable['Les musicien•nes'].Photo[0].url }}"></img>
         </div>
         <div class="content">
-          <h2>{{ airtable['band members'].Titre }}</h2>
-          {{ airtable['band members'].Texte | markdown | safe }}
+          <h2>{{ airtable['Les musicien•nes'].Titre }}</h2>
+          {{ airtable['Les musicien•nes'].Texte | markdown | safe }}
         </div>
       </div>
     </div>
     <div class="contact">
       <div>
         <div class="content">
-          <h2>{{ airtable['contact'].Titre }}</h2>
-          {{ airtable['contact'].Texte | markdown | safe }}
+          <h2>{{ airtable['Contact'].Titre }}</h2>
+          {{ airtable['Contact'].Texte | markdown | safe }}
         </div>
         <div class="image">
-          <img src="{{ airtable['contact'].Photo[0].url }}"></img>
+          <img src="{{ airtable['Contact'].Photo[0].url }}"></img>
         </div>
       </div>
     </div>

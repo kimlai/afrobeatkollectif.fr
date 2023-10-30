@@ -11,7 +11,7 @@ module.exports = async function() {
     }
   });
 
-  // transform the array of record into an Object indexed by ID
+  // transform the array of record into an Object indexed by title
   // [{ ID: about, content: ... }] => { about: { content: ... } }
-  return data.records.reduce((result, record) => ({...result, [record.fields.ID]: record.fields}), {});
+  return data.records.reduce((result, record) => ({...result, [record.fields.Titre]: record.fields}), {});
 };
