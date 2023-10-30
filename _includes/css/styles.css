@@ -14,13 +14,18 @@
 html {
   color: white;
   font-family: 'Roboto Condensed';
+  --bg-color: #0f0f0f;
+background-image:  linear-gradient(135deg, var(--bg-color) 25%, transparent 25%), linear-gradient(225deg, var(--bg-color) 25%, transparent 25%), linear-gradient(45deg, var(--bg-color) 25%, transparent 25%), linear-gradient(315deg, var(--bg-color) 25%, black 25%);
+background-position:  20px 0, 20px 0, 0 0, 0 0;
+background-size: 40px 40px;
+background-repeat: repeat;
 }
 
 body {
   padding: 0;
   margin: 0;
   /* background-color: #f9e930; */
-  background-color: #0e0e10;
+  /* background-color: #0e0e10; */
   background-image: url('/images/Afrobeat Ko Affiche 11 mars 2023 Miramas.png');
   background-repeat: no-repeat;
   background-position: top;
@@ -54,6 +59,41 @@ main {
   /* transform: rotate(-3deg) skew(-4deg, 0); */
   color: #e5212c;
   line-height: 1.1;
+  --stroke-width: 2px;
+  --stroke-color: white;
+  color: #e5212c;
+  text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color);
 }
 
 .tagline > :nth-child(2) {
@@ -195,7 +235,7 @@ p {
 }
 
 .next-concerts {
-  background-color: #0e0e10;
+  background-color: var(--bg-color);
   min-height: 90vh;
   display: grid;
   place-items: center;
@@ -265,7 +305,7 @@ p {
 }
 
 .contact {
-  background-color: #0e0e10;
+  background-color: var(--bg-color);
   color: white;
   min-height: 90vh;
   display: grid;
