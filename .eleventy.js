@@ -26,6 +26,7 @@ module.exports = function(eleventyConfig) {
 
     return (`
       <img
+        alt=""
         width="${stats.webp.at(-1).width}"
         height="${stats.webp.at(-1).height}"
         loading="lazy"
