@@ -6,6 +6,10 @@
   font-family: "Vantage";
   src: url("/fonts/Vantage.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Free Lunch";
+  src: url("/fonts/FreeLunch-Regular.woff2");
+}
 
 html {
   color: white;
@@ -44,23 +48,25 @@ main {
 }
 
 .tagline {
-  font-family: Vantage;
-  font-size: 3rem;
+  font-family: 'Free Lunch';
+  font-variant-ligatures: discretionary-ligatures;
+  font-size: 4rem;
   /* transform: rotate(-3deg) skew(-4deg, 0); */
   color: #e5212c;
   line-height: 1.1;
 }
 
 .tagline > :nth-child(2) {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h1 {
-  font-family: 'Abril Fatface';
+  font-family: 'Free Lunch';
+  font-variant-ligatures: discretionary-ligatures;
   /* font-family: Agbalumo; */
   font-size: clamp(4rem, calc(1rem + 6vw), 30rem);
   color: white;
-  /* transform: rotate(-3deg) skew(-4deg, 0); */
+  /* transform: rotate(-1deg) skew(-1deg, 0); */
   position: relative;
   margin-bottom: 2rem;
 }
