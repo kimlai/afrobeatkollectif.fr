@@ -33,6 +33,12 @@ body {
   font-size: 1.1rem;
 }
 
+@media(min-width: 120ch) {
+  body {
+    background-size: 25%;
+  }
+}
+
 main {
   margin: 0 auto;
 }
@@ -48,7 +54,8 @@ main {
 
 @media(min-width: 120ch) {
   .cover {
-    justify-content: start;
+    justify-content: bottom;
+    align-items: center;
   }
 }
 
@@ -104,7 +111,7 @@ h1 {
   font-family: 'Free Lunch';
   font-variant-ligatures: discretionary-ligatures;
   /* font-family: Agbalumo; */
-  font-size: clamp(4rem, calc(1rem + 6vw), 30rem);
+  font-size: clamp(4rem, calc(1rem + 8vw), 30rem);
   color: white;
   /* transform: rotate(-1deg) skew(-1deg, 0); */
   position: relative;
