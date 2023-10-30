@@ -1,0 +1,73 @@
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Afrobeat Kollectif</title>
+  <meta name="description" content="________________">
+  <meta name="author" content="Kim Laï TRINH">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
+  {% set css %}
+    {% include "css/reset.css" %}
+    {% include "css/styles.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="cover">
+      <h1 data-text="Afrobeat Kollectif">Afrobeat Kollectif</h1>
+      <div class="tagline">
+        <div>fela kuti</div>
+        <div>tribute band - marseille</div>
+      </div>
+    </div>
+    <div class="about">
+      <div>
+        <div class="image">
+          <img src="{{ airtable.about.Photo[0].url }}"></img>
+        </div>
+        <p class="content">{{ airtable.about.Texte }}</p>
+      </div>
+    </div>
+    </div>
+    <div class="next-concerts">
+      <div>
+        <div class="content">
+          <h2>{{ airtable['upcoming concerts'].Titre }}</h2>
+          {{ airtable['upcoming concerts'].Texte | markdown | safe }}
+        </div>
+        <div class="image">
+          <img src="{{ airtable['upcoming concerts'].Photo[0].url }}"></img>
+        </div>
+      </div>
+    </div>
+    <div class="band-members">
+      <div>
+        <div class="image">
+          <img src="/images/Afrobeat Kollectif - Théâtre Sylvain-43.jpg"></img>
+        </div>
+        <div class="content">
+          <h2>{{ airtable['band members'].Titre }}</h2>
+          {{ airtable['band members'].Texte | markdown | safe }}
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div>
+        <div class="content">
+          <h2>{{ airtable['contact'].Titre }}</h2>
+          {{ airtable['contact'].Texte | markdown | safe }}
+        </div>
+        <div class="image">
+          <img src="/images/2023-06-22 Afrobeat Kollectif 057.JPG" />
+        </div>
+      </div>
+    </div>
+  </main>
+</html>

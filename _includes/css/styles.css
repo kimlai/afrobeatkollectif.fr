@@ -1,0 +1,296 @@
+:root {
+  --red: #f63c47;
+}
+
+@font-face {
+  font-family: "Vantage";
+  src: url("/fonts/Vantage.ttf") format("truetype");
+}
+
+html {
+  color: white;
+  font-family: 'Roboto Condensed';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* background-color: #f9e930; */
+  background-color: #0e0e10;
+  background-image: url('/images/Afrobeat Ko Affiche 11 mars 2023 Miramas.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40%;
+  font-size: 1.1rem;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.cover {
+  min-height: calc(100vh - 5vmin);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 5rem;
+  padding-bottom: 7rem;
+}
+
+@media(min-width: 120ch) {
+  .cover {
+    justify-content: start;
+  }
+}
+
+.tagline {
+  font-family: Vantage;
+  font-size: 3rem;
+  /* transform: rotate(-3deg) skew(-4deg, 0); */
+  color: #e5212c;
+  line-height: 1.1;
+}
+
+.tagline > :nth-child(2) {
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: 'Abril Fatface';
+  /* font-family: Agbalumo; */
+  font-size: clamp(2.5rem, calc(1rem + 7vw), 30rem);
+  color: white;
+  /* transform: rotate(-3deg) skew(-4deg, 0); */
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 6px;
+  left: 0;
+  --stroke-width: 5px;
+  --stroke-color: #e5212c;
+  color: #e5212c;
+  text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color);
+}
+
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  --stroke-width: 4px;
+  --stroke-color: #e5212c;
+  text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * 1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * 0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * 0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * 0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -1) calc(var(--stroke-width) * 0) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * -0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0) calc(var(--stroke-width) * -1) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * -0.9239) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * -0.7071) 0
+      var(--stroke-color),
+    calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * -0.3827) 0
+      var(--stroke-color);
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about {
+  background: black;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 120ch) {
+  .about > * {
+    max-width: 110ch;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about .image {
+  max-width: 80ch;
+}
+
+p {
+  max-width: 80ch;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  padding: 2rem;
+  box-shadow: 0.5rem 0.5rem 0 #96ba4e;
+}
+@media (min-width: 120ch) {
+  .about .content {
+    margin-left: -2rem;
+  }
+}
+
+.next-concerts {
+  background-color: #0e0e10;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+@media(min-width: 120ch) {
+  .next-concerts > * {
+    max-width: 110ch;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.next-concerts .content {
+  background: white;
+  color: black;
+  padding: 2rem;
+  z-index: 1;
+  box-shadow: -0.5rem -0.5rem 0 #f8d93a;
+}
+
+@media(min-width: 120ch) {
+  .next-concerts .image {
+    max-width: 80ch;
+    margin-left: -20ch;
+  }
+  .next-concerts .content {
+    box-shadow: -0.5rem 0.5rem 0 #f8d93a;
+  }
+}
+
+.band-members {
+  background: black;
+  color: white;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+.band-members .content {
+  background: white;
+  color: black;
+  padding: 2rem;
+  width: auto;
+  flex-shrink: 0;
+  box-shadow: 0.5rem 0.5rem 0 var(--red);
+}
+
+@media(min-width: 120ch) {
+  .band-members > * {
+    max-width: 110ch;
+    display: flex;
+    align-items: center;
+  }
+  .band-members .image {
+    max-width: 80ch;
+  }
+  .band-members .content {
+    margin-left: -2rem;
+  }
+}
+.band-members .content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact {
+  background-color: #0e0e10;
+  color: white;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+.contact .content {
+  background: white;
+  color: black;
+  padding: 2rem;
+  z-index: 1;
+  box-shadow: -0.5rem -0.5rem 0 #f8d93a;
+}
+.contact .content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media(min-width: 120ch) {
+  .contact > * {
+    max-width: 110ch;
+    display: flex;
+    align-items: center;
+  }
+  .contact .content {
+    flex-shrink: 0;
+    margin-right: -2rem;
+    box-shadow: -0.5rem 0.5rem 0 #f8d93a;
+  }
+  .contact .image {
+    max-width: 80ch;
+  }
+}
