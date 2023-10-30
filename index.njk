@@ -30,7 +30,7 @@
     <div class="about">
       <div>
         <div class="image">
-          <img src="{{ airtable['À propos'].Photo[0].url }}"></img>
+          {% image airtable['À propos'].Photo[0].url %}
         </div>
         <p class="content">{{ airtable['À propos'].Texte }}</p>
       </div>
@@ -43,14 +43,14 @@
           {{ airtable['Prochaines dates'].Texte | markdown | safe }}
         </div>
         <div class="image">
-          <img src="{{ airtable['Prochaines dates'].Photo[0].url }}"></img>
+          {% image airtable['Prochaines dates'].Photo[0].url %}
         </div>
       </div>
     </div>
     <div class="band-members">
       <div>
         <div class="image">
-          <img src="{{ airtable['Les musicien•nes'].Photo[0].url }}"></img>
+          {% image airtable['Les musicien•nes'].Photo[0].url %}
         </div>
         <div class="content">
           <h2>{{ airtable['Les musicien•nes'].Titre }}</h2>
@@ -65,7 +65,7 @@
           {{ airtable['Contact'].Texte | markdown | safe }}
         </div>
         <div class="image">
-          <img src="{{ airtable['Contact'].Photo[0].url }}"></img>
+          {% image airtable['Contact'].Photo[0].url %}
         </div>
       </div>
     </div>
