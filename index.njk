@@ -50,7 +50,7 @@
     <div class="band-members">
       <div>
         <div class="image">
-          <img src="/images/Afrobeat Kollectif - Théâtre Sylvain-43.jpg"></img>
+          <img src="{{ airtable['band members'].Photo[0].url }}"></img>
         </div>
         <div class="content">
           <h2>{{ airtable['band members'].Titre }}</h2>
@@ -65,7 +65,7 @@
           {{ airtable['contact'].Texte | markdown | safe }}
         </div>
         <div class="image">
-          <img src="/images/2023-06-22 Afrobeat Kollectif 057.JPG" />
+          <img src="{{ airtable['contact'].Photo[0].url }}"></img>
         </div>
       </div>
     </div>
