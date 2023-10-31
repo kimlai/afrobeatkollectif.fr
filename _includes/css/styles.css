@@ -124,28 +124,10 @@ h1 {
 
 @keyframes stopmotion {
   33%     { transform: none; }
-  33.001% { transform: translate(1px, 1px); }
-  66.999% { transform: translate(1px, 1px); }
-  67%     { transform: translate(0px, -1px); }
-  99.999% { transform: translate(0px, -1px); }
-  100%    { transform: none; }
-}
-
-@keyframes stopmotion2 {
-  33%     { transform: none; }
-  33.001% { transform: translate(-2px, 1px); }
-  66.999% { transform: translate(-2px, 1px); }
-  67%     { transform: translate(0px, 1px) rotate(1deg); }
-  99.999% { transform: translate(0px, 1px) rotate(1deg); }
-  100%    { transform: none; }
-}
-
-@keyframes stopmotion3 {
-  33%     { transform: none; }
-  67%     { transform: translate(-1px, 0px) rotate(-1deg); }
-  99.999% { transform: translate(-1px, 0px) rotate(-1deg); }
-  33.001% { transform: translate(2px, 1px); }
-  66.999% { transform: translate(2px, 1px); }
+  33.001% { transform: var(--state1); }
+  66.999% { transform: var(--state1); }
+  67%     { transform: var(--state2); }
+  99.999% { transform: var(--state2); }
   100%    { transform: none; }
 }
 
@@ -168,7 +150,9 @@ h1 .letter {
 
 h1 .letter::before,
 h1 .letter::after {
-  --animation-duration: 0.6s;
+  --state1: translate(1px, 1px);
+  --state2: translate(0px, -1px);
+  --animation-duration: .45s;
   animation: stopmotion var(--animation-duration) linear infinite;
 }
 h1 .letter:nth-child(2n+1)::before,
@@ -181,11 +165,13 @@ h1 .letter:nth-child(3n)::after {
 }
 h1 .letter:nth-child(3n)::before,
 h1 .letter:nth-child(4n+1)::after {
-  animation-name: stopmotion3;
+  --state1: translate(-1px, 0px) rotate(-1deg);
+  --state2: translate(2px, 1px);
 }
 h1 .letter:nth-child(4n+1)::before,
 h1 .letter:nth-child(3n+2)::after {
-  animation-name: stopmotion2;
+  --state1: translate(-2px, 1px);
+  --state2: translate(0px, 1px) rotate(1deg);
 }
 
 h1 .letter::before {
