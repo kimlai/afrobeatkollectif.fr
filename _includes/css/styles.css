@@ -114,12 +114,13 @@ main {
 h1 {
   font-family: 'Free Lunch';
   font-variant-ligatures: discretionary-ligatures;
-  font-size: clamp(4rem, calc(1rem + 8vw), 30rem);
+  font-size: clamp(6rem, calc(1rem + 8vw), 30rem);
   color: white;
   position: relative;
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 0 2rem;
 }
 
 @keyframes stopmotion {
@@ -135,9 +136,6 @@ h1 {
   display: flex;
 }
 
-.word + .word {
-  margin-left: 2rem;
-}
 .letter + .letter {
   margin-left: 0;
 }
