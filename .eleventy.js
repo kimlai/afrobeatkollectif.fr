@@ -16,6 +16,22 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addShortcode("title", function(text) {
+    const wordToLetters = text => (
+      text
+        .toLowerCase()
+        .split(/(at|ro|ko|lle|ti|[a-z])/) // keep ligatures together
+        .filter(chars => chars != '')
+        .map(char => `<span class="letter" aria-hidden="true" data-text="${char}">${char}</span>`)
+        .join('')
+    );
+
+    return text
+      .split(" ")
+      .map(word => `<span class="word">${wordToLetters(word)}</span>`)
+      .join('');
+  });
+
   eleventyConfig.addShortcode("image", async function(url) {
     const stats = await Image(url, {
       widths: [400, 900, 1400, "auto"],

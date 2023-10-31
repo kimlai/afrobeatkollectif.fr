@@ -31,6 +31,10 @@ body {
   background-position: top;
   background-size: 40%;
   font-size: 1.1rem;
+
+  /* put Fela's image below the cover text shadows */
+  z-index: -2;
+  position: relative
 }
 
 @media(min-width: 120ch) {
@@ -48,7 +52,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding-left: 5rem;
+  padding: 0 1rem;
   padding-bottom: 7rem;
 }
 
@@ -110,22 +114,89 @@ main {
 h1 {
   font-family: 'Free Lunch';
   font-variant-ligatures: discretionary-ligatures;
-  /* font-family: Agbalumo; */
   font-size: clamp(4rem, calc(1rem + 8vw), 30rem);
   color: white;
-  /* transform: rotate(-1deg) skew(-1deg, 0); */
   position: relative;
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-h1::before {
+@keyframes stopmotion {
+  33%     { transform: none; }
+  33.001% { transform: translate(1px, 1px); }
+  66.999% { transform: translate(1px, 1px); }
+  67%     { transform: translate(0px, -1px); }
+  99.999% { transform: translate(0px, -1px); }
+  100%    { transform: none; }
+}
+
+@keyframes stopmotion2 {
+  33%     { transform: none; }
+  33.001% { transform: translate(-2px, 1px); }
+  66.999% { transform: translate(-2px, 1px); }
+  67%     { transform: translate(0px, 1px) rotate(1deg); }
+  99.999% { transform: translate(0px, 1px) rotate(1deg); }
+  100%    { transform: none; }
+}
+
+@keyframes stopmotion3 {
+  33%     { transform: none; }
+  67%     { transform: translate(-1px, 0px) rotate(-1deg); }
+  99.999% { transform: translate(-1px, 0px) rotate(-1deg); }
+  33.001% { transform: translate(2px, 1px); }
+  66.999% { transform: translate(2px, 1px); }
+  100%    { transform: none; }
+}
+
+.word {
+  display: flex;
+}
+
+.word + .word {
+  margin-left: 2rem;
+}
+.letter + .letter {
+  margin-left: 0;
+}
+
+h1 .letter {
+  position: relative;
+  font-variant-ligatures: discretionary-ligatures;
+  display: block;
+}
+
+h1 .letter::before,
+h1 .letter::after {
+  --animation-duration: 0.6s;
+  animation: stopmotion var(--animation-duration) linear infinite;
+}
+h1 .letter:nth-child(2n+1)::before,
+h1 .letter:nth-child(2n+1)::after {
+  animation-delay: calc(var(--animation-duration) / 3);
+}
+h1 .letter:nth-child(3n+2)::before,
+h1 .letter:nth-child(3n)::after {
+  animation-delay: calc(2 * var(--animation-duration) / 3);
+}
+h1 .letter:nth-child(3n)::before,
+h1 .letter:nth-child(4n+1)::after {
+  animation-name: stopmotion3;
+}
+h1 .letter:nth-child(4n+1)::before,
+h1 .letter:nth-child(3n+2)::after {
+  animation-name: stopmotion2;
+}
+
+h1 .letter::before {
   content: attr(data-text);
   position: absolute;
-  top: 6px;
+  top: 0px;
   left: 0;
-  --stroke-width: 5px;
+  --stroke-width: 2px;
   --stroke-color: #e5212c;
   color: #e5212c;
+  z-index: -1;
   text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
       var(--stroke-color),
     calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
@@ -160,13 +231,15 @@ h1::before {
       var(--stroke-color);
 }
 
-h1::after {
+h1 .letter::after {
   content: attr(data-text);
   position: absolute;
-  top: 0;
+  top: 7px;
   left: 0;
   --stroke-width: 4px;
   --stroke-color: #e5212c;
+  color: #e5212c;
+  z-index: -1;
   text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0
       var(--stroke-color),
     calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0
