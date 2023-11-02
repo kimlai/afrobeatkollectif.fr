@@ -32,6 +32,7 @@
     <div class="about">
       <div>
         <div class="image">
+          {% svg './images/drawing2.svg' %}
           {% image airtable['À propos'].Photo[0].url %}
         </div>
         <p class="content">{{ airtable['À propos'].Texte }}</p>
@@ -72,4 +73,13 @@
       </div>
     </div>
   </main>
+  <script>
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.parentNode.classList.add("animate");
+        }
+      });
+    }, { threshold: 0.85 }).observe(document.querySelector(".about img"));
+  </script>
 </html>

@@ -1,5 +1,6 @@
 :root {
   --red: #f63c47;
+  --red2: #e5212c;
 }
 
 @font-face {
@@ -262,6 +263,56 @@ h2 {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image > svg {
+  position: absolute;
+  inset: 0;
+  fill: none;
+}
+
+.animate #path1,
+.animate #path2,
+.animate #path3 {
+  clip-path: url(#clipPath1);
+  stroke: var(--red2);
+  stroke-width: 15;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation: draw 0.35s linear forwards, move 0.45s linear infinite;
+}
+
+.animate #path3 {
+  animation-delay: 0.15s;
+}
+.animate #path2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes draw {
+  33%     { stroke-dashoffset: 90; }
+  33.001% { stroke-dashoffset: 80; }
+  66.999% { stroke-dashoffset: 80; }
+  67%     { stroke-dashoffset: 60; }
+  99.999% { stroke-dashoffset: 60; }
+  100%    { stroke-dashoffset: 0; }
+}
+
+@keyframes move {
+  33%     { clip-path: url(#clipPath1); }
+  33.001% { clip-path: url(#clipPath2); }
+  66.999% { clip-path: url(#clipPath2); }
+  67%     { clip-path: url(#clipPath3); }
+  99.999% { clip-path: url(#clipPath3); }
+  100%    { clip-path: url(#clipPath1); }
+}
+
+.content {
+  z-index: 1;
 }
 
 .about {
