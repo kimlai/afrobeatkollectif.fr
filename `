@@ -275,56 +275,40 @@ h2 {
   fill: none;
 }
 
-svg path {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 svg mask path {
   stroke: white;
   stroke-width: 4;
 }
 
-.animate g {
-  mask: url(#mask2);
-}
-
-.animate g path {
+.animate path {
   stroke: var(--red2);
-  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-width: 1;
   --dash: 20px;
   stroke-dasharray: var(--dash);
   stroke-dashoffset: var(--dash);
 }
-
-.animate g path {
-  animation: draw 0.4s linear forwards;
-  animation-delay: calc(0.15s * var(--index));
-}
-
-.animate g {
-  animation: move 0.4s linear infinite;
+.animate path {
+  animation: draw 0.4s linear forwards, move 0.4s linear infinite;
 }
 
 @keyframes draw {
-  25%     { stroke-dashoffset: var(--dash); }
-  25.001% { stroke-dashoffset: calc(3 * var(--dash) / 4); }
-  49.999% { stroke-dashoffset: calc(3 * var(--dash) / 4); }
-  50%     { stroke-dashoffset: calc(2 * var(--dash) / 4); }
-  74.009% { stroke-dashoffset: calc(2 * var(--dash) / 4); }
-  75%     { stroke-dashoffset: calc(1 * var(--dash) / 4); }
-  99.999% { stroke-dashoffset: calc(1 * var(--dash) / 4); }
+  33%     { stroke-dashoffset: var(--dash); }
+  33.001% { stroke-dashoffset: calc(2 * var(--dash) / 3); }
+  66.999% { stroke-dashoffset: calc(2 * var(--dash) / 3); }
+  67%     { stroke-dashoffset: calc(var(--dash) / 3); }
+  99.999% { stroke-dashoffset: calc(var(--dash) / 3); }
   100%    { stroke-dashoffset: 0; }
 }
 
 @keyframes move {
-  0%      { mask: url(#mask1); }
-  33%     { mask: url(#mask1); }
-  33.001% { mask: url(#mask2); }
-  66.999% { mask: url(#mask2); }
-  67%     { mask: url(#mask3); }
-  99.999% { mask: url(#mask3); }
-  100%    { mask: url(#mask1); }
+  0%      { mask: url(#clipPath1); }
+  33%     { mask: url(#clipPath1); }
+  33.001% { mask: url(#clipPath2); }
+  66.999% { mask: url(#clipPath2); }
+  67%     { mask: url(#clipPath3); }
+  99.999% { mask: url(#clipPath3); }
+  100%    { mask: url(#clipPath1); }
 }
 
 .content {

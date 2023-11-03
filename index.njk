@@ -32,7 +32,7 @@
     <div class="about">
       <div>
         <div class="image">
-          {% svg './images/drawing2.svg' %}
+          {% svg './images/drawing4.svg' %}
           {% image airtable['À propos'].Photo[0].url %}
         </div>
         <p class="content">{{ airtable['À propos'].Texte }}</p>
@@ -74,6 +74,9 @@
     </div>
   </main>
   <script>
+    document.querySelectorAll('.image g path').forEach((path, index) => {
+      path.style.setProperty('--index', index);
+    });
     new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
