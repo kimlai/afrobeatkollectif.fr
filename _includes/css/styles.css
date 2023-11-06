@@ -330,6 +330,7 @@ svg mask path {
 
 .content {
   z-index: 1;
+  border: 1.5px solid;
 }
 
 .about {
@@ -354,7 +355,7 @@ svg mask path {
 .about p {
   max-width: 80ch;
   margin: 0 auto;
-  background: white;
+  background: #c1ff8f;
   color: black;
   padding: 2rem;
   box-shadow: 0.5rem 0.5rem 0 #50b100;
@@ -382,7 +383,7 @@ svg mask path {
 
 .next-concerts .content {
   --shadow-color: #fcd303;
-  background: white;
+  background: #fff659;
   color: black;
   padding: 2rem;
   z-index: 1;
@@ -408,7 +409,7 @@ svg mask path {
 }
 
 .band-members .content {
-  background: white;
+  background: #ff8086;
   color: black;
   padding: 2rem;
   width: auto;
@@ -420,13 +421,13 @@ svg mask path {
   .band-members > * {
     max-width: 110ch;
     display: flex;
-    align-items: center;
   }
   .band-members .image {
     max-width: 80ch;
   }
   .band-members .content {
-    margin-left: -2rem;
+    margin-top: 3rem;
+    margin-left: -3rem;
   }
 }
 .band-members .content ul {
@@ -444,7 +445,7 @@ svg mask path {
 
 .contact .content {
   --shadow-color: #50b100;
-  background: white;
+  background: #c1ff8f;
   color: black;
   padding: 2rem;
   z-index: 1;
