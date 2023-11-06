@@ -16,10 +16,10 @@ html {
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
   --bg-color: #0b0b0b;
-background-image:  linear-gradient(135deg, var(--bg-color) 25%, transparent 25%), linear-gradient(225deg, var(--bg-color) 25%, transparent 25%), linear-gradient(45deg, var(--bg-color) 25%, transparent 25%), linear-gradient(315deg, var(--bg-color) 25%, black 25%);
-background-position:  20px 0, 20px 0, 0 0, 0 0;
-background-size: 40px 40px;
-background-repeat: repeat;
+  background-image:  linear-gradient(135deg, var(--bg-color) 25%, transparent 25%), linear-gradient(225deg, var(--bg-color) 25%, transparent 25%), linear-gradient(45deg, var(--bg-color) 25%, transparent 25%), linear-gradient(315deg, var(--bg-color) 25%, black 25%);
+  background-position:  20px 0, 20px 0, 0 0, 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
 }
 
 body {
@@ -268,6 +268,12 @@ h2 {
 
 .image {
   position: relative;
+}
+
+@media (min-width: 120ch) {
+  .image img {
+    border: 2px solid;
+  }
 }
 
 .image > svg {
