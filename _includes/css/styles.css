@@ -4,8 +4,13 @@
 }
 
 @font-face {
-  font-family: "Vantage";
-  src: url("/fonts/Vantage.ttf") format("truetype");
+  font-family: "Cartridge";
+  src: url("/fonts/Cartridge-Light.woff2");
+}
+@font-face {
+  font-family: "Cartridge";
+  src: url("/fonts/Cartridge-BoldSoft.woff2");
+  font-weight: 700;
 }
 @font-face {
   font-family: "Free Lunch";
@@ -14,7 +19,7 @@
 
 html {
   color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cartridge', sans-serif;
   --bg-color: #0b0b0b;
   background-image:  linear-gradient(135deg, var(--bg-color) 25%, transparent 25%), linear-gradient(225deg, var(--bg-color) 25%, transparent 25%), linear-gradient(45deg, var(--bg-color) 25%, transparent 25%), linear-gradient(315deg, var(--bg-color) 25%, black 25%);
   background-position:  20px 0, 20px 0, 0 0, 0 0;
@@ -363,7 +368,7 @@ svg mask path {
   margin: 0 auto;
   background: #c1ff8f;
   color: black;
-  padding: 2rem;
+  padding: 3rem;
   box-shadow: 0.5rem 0.5rem 0 #50b100;
 }
 @media (min-width: 120ch) {
@@ -391,7 +396,7 @@ svg mask path {
   --shadow-color: #fcd303;
   background: #fff659;
   color: black;
-  padding: 2rem;
+  padding: 3rem;
   z-index: 1;
   box-shadow: -0.75rem -0.75rem 0 var(--shadow-color);
 }
@@ -417,7 +422,7 @@ svg mask path {
 .band-members .content {
   background: #ff8086;
   color: black;
-  padding: 2rem;
+  padding: 3rem;
   width: auto;
   flex-shrink: 0;
   box-shadow: 0.5rem 0.5rem 0 var(--red);
@@ -453,7 +458,7 @@ svg mask path {
   --shadow-color: #50b100;
   background: #c1ff8f;
   color: black;
-  padding: 2rem;
+  padding: 3rem;
   z-index: 1;
   box-shadow: -0.5rem -0.5rem 0 var(--shadow-color);
 }
