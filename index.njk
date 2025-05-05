@@ -8,10 +8,12 @@
   {% set css %}
     {% include "css/reset.css" %}
     {% include "css/styles.css" %}
+    {% include "css/lite-yt-embed.css" %}
   {% endset %}
   <style>
     {{ css | cssmin | safe }}
   </style>
+  <script defer src="/js/lite-yt-embed.js"></script>
 </head>
 <body>
   <main>
@@ -23,6 +25,9 @@
           <div>tribute band @ marseille</div>
         </div>
       </div>
+    </div>
+    <div class="youtube-embed">
+      <lite-youtube videoid="ZhPsJByX7sU"></lite-youtube>
     </div>
     <div class="about">
       <div>

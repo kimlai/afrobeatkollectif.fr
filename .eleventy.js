@@ -3,6 +3,7 @@ const MarkdownIt = require("markdown-it");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("fonts");

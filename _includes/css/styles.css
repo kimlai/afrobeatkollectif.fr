@@ -6,6 +6,7 @@
 @font-face {
   font-family: "Cartridge";
   src: url("/fonts/Cartridge-Light.woff2");
+  font-weight: normal;
 }
 @font-face {
   font-family: "Cartridge";
@@ -342,6 +343,11 @@ svg mask path {
 .content {
   z-index: 1;
   border: 1.5px solid;
+}
+
+.youtube-embed > * {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .about {
